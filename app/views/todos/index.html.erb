@@ -1,0 +1,17 @@
+<h1>My ToDos</h1>
+<br>
+<% @todos.each do |todo| %>
+
+<div class="card-columns">
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-text"><%= todo.description %></h5>
+      <p class="card-text"><%= todo.completed %></p>
+    </div>
+  </div>
+</div>
+
+<p><%= link_to 'Create ToDo', todos_new_path, class:'btn btn-sm' %></p>
+<p><%= link_to 'Edit ToDo', edit_todo_path(todo), class:'btn btn-sm' %></p>
+<p><%= link_to 'Delete ToDo', todo, method: :delete, data: { confirm: 'Are you sure about this?'}, class: 'btn btn-sm' %></p>
+<% end %>

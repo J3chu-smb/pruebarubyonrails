@@ -1,0 +1,16 @@
+<div class="row align-middle">
+<%= form_with model: @todo, local: true do |todo| %>
+<br>
+<div class="col-md-4 text-left">
+<%= todo.label :description %>
+<%= todo.text_field :description %>
+</div>
+<div class="col-md-4 text-left">
+<%= todo.label :completed %>
+<%= todo.check_box :completed, id: :completed %>
+</div>
+<%= todo.submit class:'btn' %>
+
+<% end %>
+
+</div>
