@@ -16,6 +16,28 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark text-white btn mb-5">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ml-5">
+            <a <%= link_to "Index", todos_path %></a>
+            </li>
+            <li class="nav-item ml-5">
+              <a <%= link_to "List", complete_list_path %></a>
+            </li>
+            <li class="nav-item ml-5">
+              <a <%= link_to "Create ToDo", todos_new_path %></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-white my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <%= notice %>
     <div class="container">
     <%= yield %>
     </div>
